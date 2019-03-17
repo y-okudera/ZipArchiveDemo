@@ -13,6 +13,8 @@
 		64FE0C6E223DE4F00080BC3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FE0C6D223DE4F00080BC3E /* Assets.xcassets */; };
 		64FE0C71223DE4F00080BC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FE0C6F223DE4F00080BC3E /* LaunchScreen.storyboard */; };
 		64FE0C7C223DE4F00080BC3E /* ZipArchiveDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FE0C7B223DE4F00080BC3E /* ZipArchiveDemoTests.swift */; };
+		64FE0C88223DE5860080BC3E /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FE0C87223DE5860080BC3E /* ZipArchive.framework */; };
+		64FE0C90223E091C0080BC3E /* test.zip in Resources */ = {isa = PBXBuildFile; fileRef = 64FE0C8F223E091C0080BC3E /* test.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		64FE0C77223DE4F00080BC3E /* ZipArchiveDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZipArchiveDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FE0C7B223DE4F00080BC3E /* ZipArchiveDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipArchiveDemoTests.swift; sourceTree = "<group>"; };
 		64FE0C7D223DE4F00080BC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64FE0C87223DE5860080BC3E /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZipArchive.framework; path = Carthage/Build/iOS/ZipArchive.framework; sourceTree = "<group>"; };
+		64FE0C8F223E091C0080BC3E /* test.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = test.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64FE0C88223DE5860080BC3E /* ZipArchive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 				64FE0C65223DE4EE0080BC3E /* ZipArchiveDemo */,
 				64FE0C7A223DE4F00080BC3E /* ZipArchiveDemoTests */,
 				64FE0C64223DE4EE0080BC3E /* Products */,
+				64FE0C86223DE5860080BC3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +83,7 @@
 		64FE0C65223DE4EE0080BC3E /* ZipArchiveDemo */ = {
 			isa = PBXGroup;
 			children = (
+				64FE0C8A223DE5FA0080BC3E /* Resources */,
 				64FE0C66223DE4EE0080BC3E /* AppDelegate.swift */,
 				64FE0C68223DE4EE0080BC3E /* ViewController.swift */,
 				64FE0C6A223DE4EE0080BC3E /* Main.storyboard */,
@@ -96,6 +103,22 @@
 			path = ZipArchiveDemoTests;
 			sourceTree = "<group>";
 		};
+		64FE0C86223DE5860080BC3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64FE0C87223DE5860080BC3E /* ZipArchive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64FE0C8A223DE5FA0080BC3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64FE0C8F223E091C0080BC3E /* test.zip */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +129,7 @@
 				64FE0C5F223DE4EE0080BC3E /* Sources */,
 				64FE0C60223DE4EE0080BC3E /* Frameworks */,
 				64FE0C61223DE4EE0080BC3E /* Resources */,
+				64FE0C89223DE58A0080BC3E /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -178,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64FE0C71223DE4F00080BC3E /* LaunchScreen.storyboard in Resources */,
+				64FE0C90223E091C0080BC3E /* test.zip in Resources */,
 				64FE0C6E223DE4F00080BC3E /* Assets.xcassets in Resources */,
 				64FE0C6C223DE4EE0080BC3E /* Main.storyboard in Resources */,
 			);
@@ -191,6 +216,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64FE0C89223DE58A0080BC3E /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ZipArchive.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64FE0C5F223DE4EE0080BC3E /* Sources */ = {
@@ -362,6 +409,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ZipArchiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +431,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ZipArchiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
